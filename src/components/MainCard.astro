@@ -7,6 +7,7 @@ import InstagramIcon from "../icons/InstagramIcon.astro";
 import LinkedInIcon from "../icons/LinkedInIcon.astro";
 import GithubIcon from "../icons/GithubIcon.astro";
 import XIcon from "../icons/XIcon.astro";
+import EnvelopeIcon from "../icons/EnvelopeIcon.astro";
 ---
 
 <article
@@ -21,22 +22,44 @@ import XIcon from "../icons/XIcon.astro";
     <h1 class="text-2xl font-bold">Daniel Yepes</h1>
     <h3 class="text-lg text-primary">Software Engineer</h3>
   </header>
-  <section class="text-primary flex flex-col gap-1">
-    <Social
-      link="https://www.linkedin.com/in/daniel-yepes-094757228"
-      text="Daniel Yepes"
-    >
-      <LinkedInIcon />
-    </Social>
-    <Social link="https://github.com/yepes1201" text="@yepes1201">
-      <GithubIcon />
-    </Social>
-    <Social link="https://twitter.com/daniely1201" text="@daniely1201">
-      <XIcon />
-    </Social>
-    <Social link="https://www.instagram.com/danielyepesl" text="@danielyepesl">
-      <InstagramIcon />
-    </Social>
+
+  <section class="text-primary">
+    <ul class="flex flex-col gap-1">
+      <li>
+        <Social
+          link="https://www.linkedin.com/in/daniel-yepes-094757228"
+          text="Daniel Yepes"
+        >
+          <LinkedInIcon />
+        </Social>
+      </li>
+      <li>
+        <Social link="https://github.com/yepes1201" text="@yepes1201">
+          <GithubIcon />
+        </Social>
+      </li>
+      <li>
+        <Social link="https://twitter.com/daniely1201" text="@daniely1201">
+          <XIcon />
+        </Social>
+      </li>
+      <li>
+        <Social
+          link="https://www.instagram.com/danielyepesl"
+          text="@danielyepesl"
+        >
+          <InstagramIcon />
+        </Social>
+      </li>
+      <li>
+        <Social
+          link="https://www.linkedin.com/in/daniel-yepes-094757228"
+          text="yepes1201@gmail.com"
+        >
+          <EnvelopeIcon />
+        </Social>
+      </li>
+    </ul>
   </section>
   <footer class="w-full h-min">
     <button
