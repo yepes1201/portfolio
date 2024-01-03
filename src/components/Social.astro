@@ -1,0 +1,13 @@
+---
+interface Props {
+  text: string;
+  link: string;
+}
+
+const { link, text } = Astro.props;
+---
+
+<a href={link} class="flex gap-2 [&>svg]:w-6 [&>svg]:h-6 hover:text-white">
+  <slot />
+  <span>{text}</span>
+</a>

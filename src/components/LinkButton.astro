@@ -1,0 +1,12 @@
+---
+interface Props {
+  href: string;
+  target?: string;
+}
+
+const props = Astro.props;
+---
+
+<a class={`bg-white text-black font-semibold rounded-lg`} {...props}>
+  <slot />
+</a>
