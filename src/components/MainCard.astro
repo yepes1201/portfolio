@@ -13,14 +13,16 @@ import EnvelopeIcon from "../icons/EnvelopeIcon.astro";
 <article
   class="flex flex-col items-center self-start justify-between gap-4 bg-card p-6 rounded-2xl"
 >
-  <header class="flex flex-col items-center">
+  <header class="flex items-center gap-4 md:flex-col">
     <img
-      class="w-[132px] h-[132px] rounded-full object-cover"
+      class="w-[132px] h-[132px] hidden md:block rounded-full object-cover"
       src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       alt="daniel yepes photo"
     />
-    <h1 class="text-2xl font-bold">Daniel Yepes</h1>
-    <h3 class="text-lg text-primary">Software Engineer</h3>
+    <div>
+      <h1 class="text-2xl font-bold">Daniel Yepes</h1>
+      <h3 class="text-lg text-primary">Software Engineer</h3>
+    </div>
   </header>
 
   <section class="text-primary">
@@ -60,7 +62,7 @@ import EnvelopeIcon from "../icons/EnvelopeIcon.astro";
   </section>
   <footer class="w-full h-min">
     <button
-      class="bg-white hover:bg-white/90 active:bg-white/80 text-black font-semibold w-full p-2 rounded-lg"
+      class="bg-white hover:bg-white/80 active:bg-white/70 text-black font-semibold w-full p-2 rounded-lg"
     >
       Download CV
     </button>
