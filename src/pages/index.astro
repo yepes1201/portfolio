@@ -10,6 +10,7 @@ import TimelineTime from "../components/TimelineTime.astro";
 import TimelineItem from "../components/TimelineItem.astro";
 import TimelineTitle from "../components/TimelineTitle.astro";
 import TimelineText from "../components/TimelineText.astro";
+import BentoGridItem from "../components/BentoGridItem.astro";
 ---
 
 <Layout title="Daniel Yepes | Software Engineer">
@@ -17,7 +18,7 @@ import TimelineText from "../components/TimelineText.astro";
     <!-- <Navbar /> -->
     <MainCard />
     <HorizontalBar />
-    <section class="flex flex-col gap-4 mt-4">
+    <section class="flex flex-col gap-4 mt-4 mb-8">
       <SectionCard title="About me">
         <p class="text-primary">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
@@ -64,15 +65,28 @@ import TimelineText from "../components/TimelineText.astro";
         </p>
       </SectionCard>
       <SectionCard title="Projects">
-        <p class="text-primary">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-          ullamcorper porta tellus a mattis. Proin venenatis, risus a posuere
-          pretium, metus nibh convallis velit, eget fermentum quam magna in
-          enim. Donec et tellus et nunc pulvinar accumsan sit amet id nibh.
-          Fusce fermentum, ipsum quis porttitor hendrerit, tellus turpis egestas
-          ante, lacinia ornare quam mauris non ante. Fusce aliquam molestie
-          purus ac efficitur.
-        </p>
+        <div class="mt-4 grid grid-cols-12 gap-2">
+          <BentoGridItem
+            customClass="flex items-center justify-center col-span-8"
+          >
+            1
+          </BentoGridItem>
+          <BentoGridItem
+            customClass="flex items-center justify-center col-span-4"
+          >
+            2
+          </BentoGridItem>
+          <BentoGridItem
+            customClass="flex items-center justify-center col-span-4"
+          >
+            3
+          </BentoGridItem>
+          <BentoGridItem
+            customClass="flex items-center justify-center col-span-8"
+          >
+            4
+          </BentoGridItem>
+        </div>
       </SectionCard>
       <SectionCard title="Skills">
         <div class="flex gap-2 mt-2 flex-wrap">
@@ -103,5 +117,9 @@ import TimelineText from "../components/TimelineText.astro";
       </SectionCard>
       <SectionCard title="Contact me">Email</SectionCard>
     </section>
+    <HorizontalBar />
+    <footer class="text-center py-10">
+      <p>©️ Daniel Yepes {new Date().getFullYear()}</p>
+    </footer>
   </main>
 </Layout>
