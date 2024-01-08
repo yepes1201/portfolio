@@ -2,54 +2,86 @@
 import MainCard from "../components/MainCard.astro";
 import SectionCard from "../components/SectionCard.astro";
 import Layout from "../layouts/Layout.astro";
+import HorizontalBar from "../components/HorizontalBar.astro";
+import Skill from "../components/Skill.astro";
 ---
 
 <Layout title="Daniel Yepes | Software Engineer">
-  <main class="h-[100svh]">
-    <section
-      class="flex flex-col gap-8 p-4 relative mx-auto md:top-1/4 md:p-0 md:flex-row md:max-w-2xl lg:max-w-4xl"
-    >
-      <section class="relative md:fixed">
-        <MainCard />
-      </section>
-      <section class="flex flex-1 flex-col gap-6 max-h-[50svh] md:ml-[264px]">
-        <SectionCard title="About me">
-          <p>This is me</p>
-        </SectionCard>
-        <SectionCard title="Experience">
-          <p>This is my experience</p>
-        </SectionCard>
-        <SectionCard title="Studies">
-          <p>This is my experience</p>
-        </SectionCard>
-        <SectionCard title="Projects">
-          <p>This is my experience</p>
-        </SectionCard>
-        <SectionCard title="Skills">
-          <p>This is my experience</p>
-        </SectionCard>
-        <SectionCard title="Contact me">
-          <p>This is my experience</p>
-        </SectionCard>
-        <SectionCard title="Contact me">
-          <p>This is my experience</p>
-        </SectionCard>
-        <SectionCard title="Contact me">
-          <p>This is my experience</p>
-        </SectionCard>
-        <SectionCard title="Contact me">
-          <p>This is my experience</p>
-        </SectionCard>
-        <SectionCard title="Contact me">
-          <p>This is my experience</p>
-        </SectionCard>
-        <SectionCard title="Contact me">
-          <p>This is my experience</p>
-        </SectionCard>
-        <SectionCard title="Contact me">
-          <p>This is my experience</p>
-        </SectionCard>
-      </section>
+  <main class="max-w-3xl p-4 mx-auto">
+    <!-- <Navbar /> -->
+    <MainCard />
+    <HorizontalBar />
+    <section class="flex flex-col gap-4 mt-4">
+      <SectionCard title="About me">
+        <p class="text-primary">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          ullamcorper porta tellus a mattis. Proin venenatis, risus a posuere
+          pretium, metus nibh convallis velit, eget fermentum quam magna in
+          enim. Donec et tellus et nunc pulvinar accumsan sit amet id nibh.
+          Fusce fermentum, ipsum quis porttitor hendrerit, tellus turpis egestas
+          ante, lacinia ornare quam mauris non ante. Fusce aliquam molestie
+          purus ac efficitur.
+        </p>
+      </SectionCard>
+      <SectionCard title="Professional experience">
+        <p class="text-primary">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          ullamcorper porta tellus a mattis. Proin venenatis, risus a posuere
+          pretium, metus nibh convallis velit, eget fermentum quam magna in
+          enim. Donec et tellus et nunc pulvinar accumsan sit amet id nibh.
+          Fusce fermentum, ipsum quis porttitor hendrerit, tellus turpis egestas
+          ante, lacinia ornare quam mauris non ante. Fusce aliquam molestie
+          purus ac efficitur.
+        </p>
+      </SectionCard>
+      <SectionCard title="Studies">
+        <p class="text-primary">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          ullamcorper porta tellus a mattis. Proin venenatis, risus a posuere
+          pretium, metus nibh convallis velit, eget fermentum quam magna in
+          enim. Donec et tellus et nunc pulvinar accumsan sit amet id nibh.
+          Fusce fermentum, ipsum quis porttitor hendrerit, tellus turpis egestas
+          ante, lacinia ornare quam mauris non ante. Fusce aliquam molestie
+          purus ac efficitur.
+        </p>
+      </SectionCard>
+      <SectionCard title="Projects">
+        <p class="text-primary">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          ullamcorper porta tellus a mattis. Proin venenatis, risus a posuere
+          pretium, metus nibh convallis velit, eget fermentum quam magna in
+          enim. Donec et tellus et nunc pulvinar accumsan sit amet id nibh.
+          Fusce fermentum, ipsum quis porttitor hendrerit, tellus turpis egestas
+          ante, lacinia ornare quam mauris non ante. Fusce aliquam molestie
+          purus ac efficitur.
+        </p>
+      </SectionCard>
+      <SectionCard title="Skills">
+        <div class="flex gap-2 mt-2 flex-wrap">
+          <Skill type="frontend">HTML5</Skill>
+          <Skill type="frontend">CSS3</Skill>
+          <Skill type="programmingl">Javascript</Skill>
+          <Skill type="backend">Node.js</Skill>
+          <Skill type="frontend">SCSS</Skill>
+          <Skill type="frontend">React</Skill>
+          <Skill type="programmingl">C#</Skill>
+          <Skill type="fullstack">.NET Framework</Skill>
+          <Skill type="backend">.NET Web API</Skill>
+          <Skill type="database">PostgreSQL</Skill>
+          <Skill type="database">IBM DB2</Skill>
+          <Skill type="frontend">Tailwind</Skill>
+          <Skill type="fullstack">Astro</Skill>
+          <Skill type="fullstack">Nextjs</Skill>
+          <Skill type="programmingl">Python</Skill>
+          <Skill type="backend">Django</Skill>
+          <Skill type="hard">Teamwork</Skill>
+          <Skill type="hard">Time management</Skill>
+          <Skill type="soft">English</Skill>
+          <Skill type="soft">Spanish</Skill>
+          <Skill type="hard">Problem-solving</Skill>
+          <Skill type="hard">Testing</Skill>
+        </div>
+      </SectionCard>
     </section>
   </main>
 </Layout>

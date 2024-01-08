@@ -3,68 +3,51 @@
 import Social from "./Social.astro";
 
 // Icons
-import InstagramIcon from "../icons/InstagramIcon.astro";
 import LinkedInIcon from "../icons/LinkedInIcon.astro";
 import GithubIcon from "../icons/GithubIcon.astro";
 import XIcon from "../icons/XIcon.astro";
 import EnvelopeIcon from "../icons/EnvelopeIcon.astro";
 ---
 
-<article
-  class="flex flex-col items-center self-start justify-between gap-4 bg-card p-6 rounded-2xl"
->
-  <header class="flex items-center gap-4 md:flex-col">
+<article class="flex flex-col self-start gap-4 py-6">
+  <header class="flex items-center gap-4">
     <img
       class="w-[132px] h-[132px] hidden md:block rounded-full object-cover"
       src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       alt="daniel yepes photo"
     />
-    <div>
-      <h1 class="text-2xl font-bold">Daniel Yepes</h1>
-      <h3 class="text-lg text-primary">Software Engineer</h3>
+    <div class="flex flex-col gap-4">
+      <div>
+        <h1 class="text-2xl font-bold">Daniel Yepes</h1>
+        <h3 class="text-lg text-primary font-semibold">Software Engineer</h3>
+      </div>
+      <div class="text-primary">
+        <ul class="flex flex-wrap gap-2">
+          <li>
+            <Social
+              link="https://www.linkedin.com/in/daniel-yepes-094757228"
+              text="LinkedIn"
+            >
+              <LinkedInIcon />
+            </Social>
+          </li>
+          <li>
+            <Social link="https://github.com/yepes1201" text="Github">
+              <GithubIcon />
+            </Social>
+          </li>
+          <li>
+            <Social link="https://twitter.com/daniely1201" text="X (Twitter)">
+              <XIcon />
+            </Social>
+          </li>
+          <li>
+            <Social link="#" text="Email">
+              <EnvelopeIcon />
+            </Social>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
-
-  <section class="text-primary">
-    <ul class="flex flex-col gap-1">
-      <li>
-        <Social
-          link="https://www.linkedin.com/in/daniel-yepes-094757228"
-          text="Daniel Yepes"
-        >
-          <LinkedInIcon />
-        </Social>
-      </li>
-      <li>
-        <Social link="https://github.com/yepes1201" text="@yepes1201">
-          <GithubIcon />
-        </Social>
-      </li>
-      <li>
-        <Social link="https://twitter.com/daniely1201" text="@daniely1201">
-          <XIcon />
-        </Social>
-      </li>
-      <li>
-        <Social
-          link="https://www.instagram.com/danielyepesl"
-          text="@danielyepesl"
-        >
-          <InstagramIcon />
-        </Social>
-      </li>
-      <li>
-        <Social link="#" text="yepes1201@gmail.com">
-          <EnvelopeIcon />
-        </Social>
-      </li>
-    </ul>
-  </section>
-  <footer class="w-full h-min">
-    <button
-      class="bg-white hover:bg-white/80 active:bg-white/70 text-black font-semibold w-full p-2 rounded-lg"
-    >
-      Download CV
-    </button>
-  </footer>
 </article>

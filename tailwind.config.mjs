@@ -10,6 +10,10 @@ export default {
       textColor: {
         primary: "#C1C1C1",
       },
+      borderColor: {
+        dark: "#141414",
+        card: "#272727",
+      },
     },
   },
   plugins: [],

@@ -2,6 +2,7 @@
 interface Props {
   text: string;
   link: string;
+  canCopy?: boolean;
 }
 
 const { link, text } = Astro.props;
@@ -9,7 +10,7 @@ const { link, text } = Astro.props;
 
 <a
   href={link}
-  class="flex justify-center md:justify-start gap-2 [&>svg]:w-6 [&>svg]:h-6 hover:text-white"
+  class="flex items-center justify-center md:justify-start gap-2 [&>svg]:w-5 [&>svg]:h-5 hover:text-white"
 >
   <slot />
   <span>{text}</span>

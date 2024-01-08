@@ -1,0 +1,59 @@
+---
+type SkillType =
+  | "frontend"
+  | "backend"
+  | "soft"
+  | "hard"
+  | "fullstack"
+  | "programmingl"
+  | "database";
+
+interface TypeConfig {
+  title: string;
+  class: string;
+}
+
+interface Props {
+  type: SkillType;
+}
+
+const typesConfig: Record<SkillType, TypeConfig> = {
+  frontend: {
+    title: "Frontend",
+    class: "border-blue-500 bg-blue-500/25 text-blue-200",
+  },
+  backend: {
+    title: "Backend",
+    class: "border-purple-500 bg-purple-500/25 text-purple-200",
+  },
+  soft: {
+    title: "Soft",
+    class: "border-green-500 bg-green-500/25 text-green-200",
+  },
+  hard: {
+    title: "Hard",
+    class: "border-red-500 bg-red-500/25 text-red-200",
+  },
+  fullstack: {
+    title: "Fullstack",
+    class: "border-amber-500 bg-amber-500/25 text-amber-200",
+  },
+  programmingl: {
+    title: "Programming Language",
+    class: "border-pink-500 bg-pink-500/25 text-pink-200",
+  },
+  database: {
+    title: "Database",
+    class: "border-lime-500 bg-lime-500/25 text-lime-200",
+  },
+};
+
+const { type } = Astro.props;
+---
+
+<span
+  data-tooltip={typesConfig[type].title}
+  class={`px-2 py-1 border rounded-full text-sm font-semibold ${typesConfig[type].class}`}
+>
+  <slot />
+</span>
