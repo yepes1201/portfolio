@@ -1,9 +1,15 @@
 ---
-import MainCard from "../components/MainCard.astro";
-import SectionCard from "../components/SectionCard.astro";
+// Components & Layouts
 import Layout from "../layouts/Layout.astro";
+import MainCard from "../components/MainCard.astro";
 import HorizontalBar from "../components/HorizontalBar.astro";
+import SectionCard from "../components/SectionCard.astro";
 import Skill from "../components/Skill.astro";
+import Timeline from "../components/Timeline.astro";
+import TimelineTime from "../components/TimelineTime.astro";
+import TimelineItem from "../components/TimelineItem.astro";
+import TimelineTitle from "../components/TimelineTitle.astro";
+import TimelineText from "../components/TimelineText.astro";
 ---
 
 <Layout title="Daniel Yepes | Software Engineer">
@@ -24,15 +30,27 @@ import Skill from "../components/Skill.astro";
         </p>
       </SectionCard>
       <SectionCard title="Work experience">
-        <p class="text-primary">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-          ullamcorper porta tellus a mattis. Proin venenatis, risus a posuere
-          pretium, metus nibh convallis velit, eget fermentum quam magna in
-          enim. Donec et tellus et nunc pulvinar accumsan sit amet id nibh.
-          Fusce fermentum, ipsum quis porttitor hendrerit, tellus turpis egestas
-          ante, lacinia ornare quam mauris non ante. Fusce aliquam molestie
-          purus ac efficitur.
-        </p>
+        <Timeline>
+          <TimelineItem>
+            <TimelineTime>March 2022 - August 2022</TimelineTime>
+            <TimelineTitle>
+              Intership at Universidad Autonoma del Caribe
+            </TimelineTitle>
+            <TimelineText>
+              Mantain and build new features for the intern app of the company.
+            </TimelineText>
+          </TimelineItem>
+
+          <TimelineItem>
+            <TimelineTime>August 2022 - Now</TimelineTime>
+            <TimelineTitle>
+              Software developer at Universidad Autonoma del Caribe
+            </TimelineTitle>
+            <TimelineText>
+              Mantain and build new features for the intern app of the company.
+            </TimelineText>
+          </TimelineItem>
+        </Timeline>
       </SectionCard>
       <SectionCard title="Education">
         <p class="text-primary">
@@ -65,6 +83,7 @@ import Skill from "../components/Skill.astro";
           <Skill type="frontend">SCSS</Skill>
           <Skill type="frontend">React</Skill>
           <Skill type="programmingl">C#</Skill>
+          <Skill type="tools">Git</Skill>
           <Skill type="fullstack">.NET Framework</Skill>
           <Skill type="backend">.NET Web API</Skill>
           <Skill type="database">PostgreSQL</Skill>
@@ -82,6 +101,7 @@ import Skill from "../components/Skill.astro";
           <Skill type="hard">Testing</Skill>
         </div>
       </SectionCard>
+      <SectionCard title="Contact me">Email</SectionCard>
     </section>
   </main>
 </Layout>
