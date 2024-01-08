@@ -6,7 +6,8 @@ type SkillType =
   | "hard"
   | "fullstack"
   | "programmingl"
-  | "database";
+  | "database"
+  | "tools";
 
 interface TypeConfig {
   title: string;
@@ -45,6 +46,10 @@ const typesConfig: Record<SkillType, TypeConfig> = {
   database: {
     title: "Database",
     class: "border-lime-500 bg-lime-500/25 text-lime-200",
+  },
+  tools: {
+    title: "Tools",
+    class: "border-indigo-500 bg-indigo-500/25 text-indigo-200",
   },
 };
 
