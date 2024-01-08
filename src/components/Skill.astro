@@ -1,18 +1,5 @@
 ---
-type SkillType =
-  | "frontend"
-  | "backend"
-  | "soft"
-  | "hard"
-  | "fullstack"
-  | "programmingl"
-  | "database"
-  | "tools";
-
-interface TypeConfig {
-  title: string;
-  class: string;
-}
+import type { SkillType, TypeConfig } from "../types/skill.types";
 
 interface Props {
   type: SkillType;
