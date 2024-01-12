@@ -11,6 +11,7 @@ import TimelineItem from "../components/TimelineItem.astro";
 import TimelineTitle from "../components/TimelineTitle.astro";
 import TimelineText from "../components/TimelineText.astro";
 import BentoGridItem from "../components/BentoGridItem.astro";
+import BentoGridContent from "../components/BentoGridContent.astro";
 ---
 
 <Layout title="Daniel Yepes | Software Engineer">
@@ -30,6 +31,7 @@ import BentoGridItem from "../components/BentoGridItem.astro";
           purus ac efficitur.
         </p>
       </SectionCard>
+
       <SectionCard title="Work experience">
         <Timeline>
           <TimelineItem>
@@ -53,6 +55,7 @@ import BentoGridItem from "../components/BentoGridItem.astro";
           </TimelineItem>
         </Timeline>
       </SectionCard>
+
       <SectionCard title="Education">
         <p class="text-primary">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
@@ -64,32 +67,41 @@ import BentoGridItem from "../components/BentoGridItem.astro";
           purus ac efficitur.
         </p>
       </SectionCard>
+
       <SectionCard title="Projects">
-        <div class="mt-4 grid grid-cols-12 gap-2">
-          <BentoGridItem
-            customClass="flex items-center justify-center col-span-8"
-          >
-            1
+        <div class="mt-4 grid grid-cols-12 gap-4">
+          <BentoGridItem customClass="col-span-8">
+            <BentoGridContent imgClass="bg-project-one">
+              <h2 class="text-lg font-semibold">Astra</h2>
+              <p class="text-sm text-primary">Description</p>
+            </BentoGridContent>
           </BentoGridItem>
-          <BentoGridItem
-            customClass="flex items-center justify-center col-span-4"
-          >
-            2
+
+          <BentoGridItem customClass="col-span-4">
+            <BentoGridContent imgClass="bg-project-one">
+              <h2 class="text-lg font-semibold">Astra</h2>
+              <p class="text-sm text-primary">Description</p>
+            </BentoGridContent>
           </BentoGridItem>
-          <BentoGridItem
-            customClass="flex items-center justify-center col-span-4"
-          >
-            3
+
+          <BentoGridItem customClass="col-span-4">
+            <BentoGridContent imgClass="bg-project-one">
+              <h2 class="text-lg font-semibold">Astra</h2>
+              <p class="text-sm text-primary">Description</p>
+            </BentoGridContent>
           </BentoGridItem>
-          <BentoGridItem
-            customClass="flex items-center justify-center col-span-8"
-          >
-            4
+
+          <BentoGridItem customClass="col-span-8">
+            <BentoGridContent imgClass="bg-project-one">
+              <h2 class="text-lg font-semibold">Astra</h2>
+              <p class="text-sm text-primary">Description</p>
+            </BentoGridContent>
           </BentoGridItem>
         </div>
       </SectionCard>
+
       <SectionCard title="Skills">
-        <div class="flex gap-2 mt-2 flex-wrap">
+        <div class="flex gap-2 mt-2 mb-6 flex-wrap">
           <Skill type="frontend">HTML5</Skill>
           <Skill type="frontend">CSS3</Skill>
           <Skill type="programmingl">Javascript</Skill>
@@ -107,6 +119,9 @@ import BentoGridItem from "../components/BentoGridItem.astro";
           <Skill type="fullstack">Nextjs</Skill>
           <Skill type="programmingl">Python</Skill>
           <Skill type="backend">Django</Skill>
+        </div>
+
+        <div class="flex gap-2 mb-2 flex-wrap">
           <Skill type="hard">Teamwork</Skill>
           <Skill type="hard">Time management</Skill>
           <Skill type="soft">English</Skill>
@@ -115,6 +130,7 @@ import BentoGridItem from "../components/BentoGridItem.astro";
           <Skill type="hard">Testing</Skill>
         </div>
       </SectionCard>
+
       <SectionCard title="Contact me">Email</SectionCard>
     </section>
     <HorizontalBar />
@@ -123,3 +139,5 @@ import BentoGridItem from "../components/BentoGridItem.astro";
     </footer>
   </main>
 </Layout>
+
+<style></style>

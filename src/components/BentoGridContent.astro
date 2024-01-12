@@ -1,0 +1,21 @@
+---
+interface Props {
+  imgClass: string;
+}
+
+const { imgClass } = Astro.props;
+---
+
+<div class="absolute z-10 top-0 w-full h-full p-2">
+  <slot />
+</div>
+<div
+  class={`h-full fit relative transition-transform bg-center bg-cover opacity-50 ${imgClass}`}
+>
+</div>
+
+<style scoped>
+  div:first-child:hover + div:last-child {
+    transform: scale(1.25);
+  }
+</style>

@@ -6,6 +6,6 @@ interface Props {
 const { customClass } = Astro.props;
 ---
 
-<div class={`h-52 border-card border rounded-lg ${customClass}`}>
+<div class={`h-52 rounded-lg relative overflow-hidden ${customClass}`}>
   <slot />
 </div>
