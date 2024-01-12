@@ -45,7 +45,20 @@ const { type } = Astro.props;
 
 <span
   data-tooltip={typesConfig[type].title}
-  class={`px-2 py-1 border rounded-full text-sm font-semibold ${typesConfig[type].class}`}
+  class={`relative px-2 py-1 border rounded-full text-sm font-semibold [&:hover>div]:block ${typesConfig[type].class}`}
 >
   <slot />
+  <div
+    class="hidden bg-white text-black px-3 py-1 rounded-lg absolute z-10 text-nowrap -top-[135%] left-1/2 -translate-x-1/2"
+  >
+    {typesConfig[type].title}
+  </div>
 </span>
+
+<style>
+  div::before {
+    content: "";
+    transform: translateX(-50%) rotate(45deg);
+    @apply absolute z-50 w-2 h-2 bg-white -bottom-[15%] left-1/2;
+  }
+</style>
