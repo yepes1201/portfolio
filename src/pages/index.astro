@@ -12,6 +12,8 @@ import TimelineTitle from "../components/TimelineTitle.astro";
 import TimelineText from "../components/TimelineText.astro";
 import BentoGridItem from "../components/BentoGridItem.astro";
 import BentoGridContent from "../components/BentoGridContent.astro";
+import CopyIcon from "../icons/CopyIcon.astro";
+import Tooltip from "../components/Tooltip.astro";
 ---
 
 <Layout title="Daniel Yepes | Software Engineer">
@@ -69,7 +71,7 @@ import BentoGridContent from "../components/BentoGridContent.astro";
       </SectionCard>
 
       <SectionCard title="Projects">
-        <div class="mt-4 grid grid-cols-12 gap-4">
+        <div class="mt-2 grid grid-cols-12 gap-4">
           <BentoGridItem customClass="col-span-8">
             <BentoGridContent imgClass="bg-project-one">
               <h2 class="text-lg font-semibold">Astra</h2>
@@ -117,8 +119,8 @@ import BentoGridContent from "../components/BentoGridContent.astro";
           <Skill type="frontend">Tailwind</Skill>
           <Skill type="fullstack">Astro</Skill>
           <Skill type="fullstack">Nextjs</Skill>
-          <Skill type="programmingl">Python</Skill>
-          <Skill type="backend">Django</Skill>
+          <!-- <Skill type="programmingl">Python</Skill>
+          <Skill type="backend">Django</Skill> -->
         </div>
 
         <div class="flex gap-2 mb-2 flex-wrap">
@@ -131,7 +133,26 @@ import BentoGridContent from "../components/BentoGridContent.astro";
         </div>
       </SectionCard>
 
-      <SectionCard title="Contact me">Email</SectionCard>
+      <SectionCard title="Contact me">
+        <div class="bg-card flex mt-2 pl-4 w-fit rounded-lg">
+          <input
+            id="email"
+            class="bg-transparent text-white"
+            placeholder="Email"
+            value="yepes1201@gmail.com"
+            disabled
+          />
+          <button
+            data-tooltip="Copy"
+            id="emailCopy"
+            type="button"
+            class="bg-white hover:bg-white/80 relative text-black gap-2 px-4 py-2 rounded-r-lg [&>svg]:h-6 [&>svg]:w-6 [&:hover>.tooltip]:block"
+          >
+            <CopyIcon />
+            <Tooltip text="Copy" />
+          </button>
+        </div>
+      </SectionCard>
     </section>
     <HorizontalBar />
     <footer class="text-center py-10">
@@ -140,4 +161,13 @@ import BentoGridContent from "../components/BentoGridContent.astro";
   </main>
 </Layout>
 
-<style></style>
+<script>
+  import { copyToClipboard } from "../utils/utils";
+
+  const buttonCopy = document.getElementById("emailCopy") as HTMLButtonElement;
+  const emailInput = document.getElementById("email") as HTMLInputElement;
+
+  buttonCopy?.addEventListener("click", (): void =>
+    copyToClipboard(emailInput)
+  );
+</script>

@@ -1,0 +1,21 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<div
+  class="tooltip hidden bg-white text-black px-3 py-1 rounded-lg absolute z-50 text-nowrap -top-[35px] left-1/2 -translate-x-1/2"
+>
+  {text}
+</div>
+
+<style scoped>
+  .tooltip::before {
+    content: "";
+    transform: translateX(-50%) rotate(45deg);
+    @apply absolute z-50 w-2 h-2 bg-white -bottom-[2.5px] left-1/2;
+  }
+</style>
