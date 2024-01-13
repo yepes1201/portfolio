@@ -1,0 +1,11 @@
+---
+interface Props {
+  customClass: string;
+}
+
+const { customClass } = Astro.props;
+---
+
+<div class={`h-52 rounded-lg relative overflow-hidden ${customClass}`}>
+  <slot />
+</div>

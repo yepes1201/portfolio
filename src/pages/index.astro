@@ -1,14 +1,267 @@
 ---
-import MainCard from "../components/MainCard.astro";
+// Components & Layouts
 import Layout from "../layouts/Layout.astro";
+import MainCard from "../components/MainCard.astro";
+import HorizontalBar from "../components/HorizontalBar.astro";
+import SectionCard from "../components/SectionCard.astro";
+import Skill from "../components/Skill.astro";
+import Timeline from "../components/Timeline.astro";
+import TimelineTime from "../components/TimelineTime.astro";
+import TimelineItem from "../components/TimelineItem.astro";
+import TimelineTitle from "../components/TimelineTitle.astro";
+import TimelineText from "../components/TimelineText.astro";
+import BentoGridItem from "../components/BentoGridItem.astro";
+import BentoGridContent from "../components/BentoGridContent.astro";
+import CopyIcon from "../icons/CopyIcon.astro";
+import Tooltip from "../components/Tooltip.astro";
 ---
 
-<Layout title="Daniel Yepes | Full-stack Developer">
-  <main class="h-[100svh] flex justify-center items-center gap-4">
-    <!-- <nav class="">Navigation</nav> -->
-    <section class="flex gap-8">
-      <MainCard />
-      <section>Sections</section>
+<Layout title="Daniel Yepes | Software Engineer">
+  <main class="max-w-3xl p-4 mx-auto">
+    <!-- <Navbar /> -->
+    <MainCard />
+    <HorizontalBar />
+    <section class="flex flex-col gap-4 mt-4 mb-8">
+      <SectionCard title="About me">
+        <p class="text-primary">
+          <strong class="text-white">Software Engineer</strong> based in <strong
+            class="text-white">Colombia</strong
+          >. Especialized in building robust full-stack systems from the ground
+          up, always looking forward to craft high quality and scalable digital
+          products. Open for new challenges and opportunities to contribute to
+          innovative projects.
+        </p>
+      </SectionCard>
+
+      <SectionCard title="Work experience">
+        <Timeline>
+          <TimelineItem>
+            <TimelineTime>March 2022 - August 2022</TimelineTime>
+            <TimelineTitle>
+              Intership at Universidad Autonoma del Caribe
+            </TimelineTitle>
+            <TimelineText>
+              <ul class="flex flex-col gap-6">
+                <li>
+                  <p class="mb-2 text-primary">
+                    Built a <strong class="text-white"
+                      >loan installment calculation system</strong
+                    >. The system calculates interest, the number of
+                    installments, total payments made, and the remaining
+                    balance, all in accordance with the amortization schedule.
+                  </p>
+                  <div class="flex gap-2 flex-wrap">
+                    <Skill type="fullstack">.NET Framework</Skill>
+                    <Skill type="database">IBM DB2</Skill>
+                    <Skill type="frontend">HTML5</Skill>
+                    <Skill type="frontend">CSS3</Skill>
+                    <Skill type="programmingl">Javascript</Skill>
+                    <Skill type="programmingl">C#</Skill>
+                  </div>
+                </li>
+                <li>
+                  <p class="mb-2 text-primary">
+                    Developed a <strong class="text-white"
+                      >Syllabus System</strong
+                    > for the University. Managed course information, including details
+                    about teachers, class content, knowledge objectives, skills to
+                    develop, and book authors related to the class content.
+                  </p>
+                  <div class="flex gap-2 flex-wrap">
+                    <Skill type="fullstack">.NET Framework</Skill>
+                    <Skill type="database">IBM DB2</Skill>
+                    <Skill type="frontend">HTML5</Skill>
+                    <Skill type="frontend">CSS3</Skill>
+                    <Skill type="programmingl">Javascript</Skill>
+                    <Skill type="programmingl">C#</Skill>
+                  </div>
+                </li>
+              </ul>
+            </TimelineText>
+          </TimelineItem>
+
+          <TimelineItem>
+            <TimelineTime>August 2022 - Now</TimelineTime>
+            <TimelineTitle>
+              Software developer at Universidad Autonoma del Caribe
+            </TimelineTitle>
+            <TimelineText>
+              <ul class="flex flex-col gap-6">
+                <li>
+                  <p class="mb-2 text-primary">
+                    Participated in the <strong class="text-white"
+                      >database migration</strong
+                    > from <strong class="text-white">IBM DB2</strong> to <strong
+                      class="text-white">PostgreSQL</strong
+                    > by converting procedures, tables, triggers, and views into
+                    PostgreSQL.
+                  </p>
+                  <div class="flex gap-2 flex-wrap">
+                    <Skill type="database">IBM DB2</Skill>
+                    <Skill type="database">PostgreSQL</Skill>
+                  </div>
+                </li>
+                <li>
+                  <p class="mb-2 text-primary">
+                    Developed a comprehensive <strong class="text-white"
+                      >consultation system for psychologists</strong
+                    >. Designed and implemented the database, enabling the
+                    tracking of patient history and consultations. Implemented a
+                    feature for authorized users, based on their roles, to
+                    download reports.
+                  </p>
+                  <div class="flex gap-2 flex-wrap">
+                    <Skill type="fullstack">.NET Framework</Skill>
+                    <Skill type="database">IBM DB2</Skill>
+                    <Skill type="database">PostgreSQL</Skill>
+                    <Skill type="frontend">HTML5</Skill>
+                    <Skill type="frontend">CSS3</Skill>
+                    <Skill type="programmingl">Javascript</Skill>
+                    <Skill type="programmingl">C#</Skill>
+                  </div>
+                </li>
+                <li>
+                  <p class="mb-2 text-primary">
+                    <strong class="text-white"
+                      >Team leader of Astra project</strong
+                    >. A new platform designed for students, teachers, and
+                    administrative users, built using <strong class="text-white"
+                      >React</strong
+                    >. Responsible for documentation, best practices,
+                    implementing the authentication system, logs reporting,
+                    project structure, and additional functionalities. Led the
+                    development of the notes module, enabling students to search
+                    for their notes based on their college career.
+                  </p>
+                  <div class="flex gap-2 flex-wrap">
+                    <Skill type="database">IBM DB2</Skill>
+                    <Skill type="database">PostgreSQL</Skill>
+                    <Skill type="frontend">HTML5</Skill>
+                    <Skill type="frontend">CSS3</Skill>
+                    <Skill type="programmingl">Javascript</Skill>
+                    <Skill type="programmingl">C#</Skill>
+                    <Skill type="frontend">React</Skill>
+                    <Skill type="backend">.NET Web API</Skill>
+                  </div>
+                </li>
+              </ul>
+            </TimelineText>
+          </TimelineItem>
+        </Timeline>
+      </SectionCard>
+
+      <SectionCard title="Education">
+        <p class="text-primary">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          ullamcorper porta tellus a mattis. Proin venenatis, risus a posuere
+          pretium, metus nibh convallis velit, eget fermentum quam magna in
+          enim. Donec et tellus et nunc pulvinar accumsan sit amet id nibh.
+          Fusce fermentum, ipsum quis porttitor hendrerit, tellus turpis egestas
+          ante, lacinia ornare quam mauris non ante. Fusce aliquam molestie
+          purus ac efficitur.
+        </p>
+      </SectionCard>
+
+      <SectionCard title="Projects">
+        <div class="mt-2 grid grid-cols-12 gap-4">
+          <BentoGridItem customClass="col-span-8">
+            <BentoGridContent imgClass="bg-project-one">
+              <h2 class="text-lg font-semibold">Astra</h2>
+              <p class="text-sm text-primary">Description</p>
+            </BentoGridContent>
+          </BentoGridItem>
+
+          <BentoGridItem customClass="col-span-4">
+            <BentoGridContent imgClass="bg-project-one">
+              <h2 class="text-lg font-semibold">Astra</h2>
+              <p class="text-sm text-primary">Description</p>
+            </BentoGridContent>
+          </BentoGridItem>
+
+          <BentoGridItem customClass="col-span-4">
+            <BentoGridContent imgClass="bg-project-one">
+              <h2 class="text-lg font-semibold">Astra</h2>
+              <p class="text-sm text-primary">Description</p>
+            </BentoGridContent>
+          </BentoGridItem>
+
+          <BentoGridItem customClass="col-span-8">
+            <BentoGridContent imgClass="bg-project-one">
+              <h2 class="text-lg font-semibold">Astra</h2>
+              <p class="text-sm text-primary">Description</p>
+            </BentoGridContent>
+          </BentoGridItem>
+        </div>
+      </SectionCard>
+
+      <SectionCard title="Skills">
+        <div class="flex gap-2 mt-2 mb-6 flex-wrap">
+          <Skill type="frontend">HTML5</Skill>
+          <Skill type="frontend">CSS3</Skill>
+          <Skill type="programmingl">Javascript</Skill>
+          <Skill type="backend">Node.js</Skill>
+          <Skill type="frontend">SCSS</Skill>
+          <Skill type="frontend">React</Skill>
+          <Skill type="programmingl">C#</Skill>
+          <Skill type="tools">Git</Skill>
+          <Skill type="fullstack">.NET Framework</Skill>
+          <Skill type="backend">.NET Web API</Skill>
+          <Skill type="database">PostgreSQL</Skill>
+          <Skill type="database">IBM DB2</Skill>
+          <Skill type="frontend">Tailwind</Skill>
+          <Skill type="fullstack">Astro</Skill>
+          <Skill type="fullstack">Nextjs</Skill>
+          <Skill type="tools">Jest</Skill>
+          <Skill type="tools">Playwright</Skill>
+          <!-- <Skill type="programmingl">Python</Skill>
+          <Skill type="backend">Django</Skill> -->
+        </div>
+
+        <div class="flex gap-2 mb-2 flex-wrap">
+          <Skill type="hard">Teamwork</Skill>
+          <Skill type="hard">Time management</Skill>
+          <Skill type="soft">English</Skill>
+          <Skill type="soft">Spanish</Skill>
+          <Skill type="hard">Problem-solving</Skill>
+          <Skill type="hard">Testing</Skill>
+        </div>
+      </SectionCard>
+
+      <!-- <SectionCard title="Contact me">
+        <div class="bg-card flex mt-2 pl-4 w-fit rounded-lg">
+          <input
+            id="email"
+            class="bg-transparent text-white"
+            placeholder="Email"
+            value="yepes1201@gmail.com"
+            disabled
+          />
+          <button
+            data-tooltip="Copy"
+            id="emailCopy"
+            type="button"
+            class="bg-white hover:bg-white/80 relative text-black gap-2 px-4 py-2 rounded-r-lg [&>svg]:h-6 [&>svg]:w-6 [&:hover>.tooltip]:block"
+          >
+            <CopyIcon />
+            <Tooltip text="Copy" />
+          </button>
+        </div>
+      </SectionCard> -->
     </section>
+    <HorizontalBar />
+    <footer class="text-center py-10">
+      <p>©️ Daniel Yepes {new Date().getFullYear()}</p>
+    </footer>
   </main>
 </Layout>
+
+<script>
+  import { copyToClipboard } from "../utils/utils";
+
+  const buttonCopy = document.getElementById("emailCopy") as HTMLButtonElement;
+  const emailInput = document.getElementById("email") as HTMLInputElement;
+
+  buttonCopy?.addEventListener("click", (): void =>
+    copyToClipboard(emailInput)
+  );
+</script>

@@ -1,13 +1,21 @@
 ---
+import Tooltip from "./Tooltip.astro";
+
 interface Props {
   text: string;
-  link: string;
+  link?: string;
+  isEmail?: boolean;
 }
 
-const { link, text } = Astro.props;
+const { link, text, isEmail } = Astro.props;
 ---
 
-<a href={link} class="flex gap-2 [&>svg]:w-6 [&>svg]:h-6 hover:text-white">
+<a
+  href={link}
+  class={`flex items-center relative justify-center md:justify-start gap-2 [&>svg]:w-5 [&>svg]:h-5 [&:hover>.tooltip]:block hover:text-white ${
+    isEmail ? "cursor-text" : "cursor-pointer"
+  }`}
+>
   <slot />
   <span>{text}</span>
 </a>
