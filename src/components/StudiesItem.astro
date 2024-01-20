@@ -1,0 +1,16 @@
+---
+
+---
+
+<article class="flex items-center gap-4">
+  <div class="w-3 h-3 rounded-full bg-card"></div>
+  <div class="text-white">
+    <slot />
+  </div>
+</article>
+
+<style>
+  article:hover > div:first-child {
+    @apply border border-gray-500;
+  }
+</style>
