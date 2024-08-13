@@ -25,24 +25,52 @@ import StudiesAcademy from "../components/StudiesAcademy.astro";
     <section class="flex flex-col gap-4 mt-4 mb-8">
       <SectionCard title="About me">
         <p class="text-primary">
-          <strong class="text-white">Software Engineer</strong> based in <strong
-            class="text-white">Colombia</strong
-          >. Specialized in building robust full-stack systems from the ground
-          up, always looking forward to craft high quality and scalable digital
-          products. Ready to dive into exciting challenges that impacts people's
-          lives.
+          <b class="text-white">Specialized</b> in building <b
+            class="text-white">full-stack systems</b
+          >. Always striving to create high-quality and scalable digital
+          products. Currently developing the new institutional web application
+          for the Universidad Autónoma del Caribe. Expert in languages and
+          technologies such as <b class="text-white">C#</b>, <b
+            class="text-white">JavaScript</b
+          >, <b class="text-white">.NET</b>, <b class="text-white">React</b>,
+          and <b class="text-white">PostgreSQL</b>.
         </p>
       </SectionCard>
 
       <SectionCard title="Work experience">
         <Timeline>
           <TimelineItem>
-            <TimelineTime>March 2022 - August 2022</TimelineTime>
+            <TimelineTime>March 2022 - Now</TimelineTime>
             <TimelineTitle>
-              Intership at Universidad Autonoma del Caribe
+              Software developer at Universidad Autonoma del Caribe
             </TimelineTitle>
             <TimelineText>
               <ul class="flex flex-col gap-6">
+                <li>
+                  <p class="mb-2 text-primary">
+                    <strong class="text-white"
+                      >Team leader of Astra project</strong
+                    >. A new platform designed for students, teachers, and
+                    administrative users, built using <strong class="text-white"
+                      >React</strong
+                    >. Responsible for documentation, best practices,
+                    implementing the authentication system, logs reporting,
+                    project structure, and additional functionalities. Led the
+                    development of the notes module, enabling students to search
+                    for their notes based on their college career.
+                  </p>
+                  <div class="flex gap-2 flex-wrap">
+                    <Skill type="frontend">React</Skill>
+                    <Skill type="backend">.NET Web API</Skill>
+                    <Skill type="programmingl">C#</Skill>
+                    <Skill type="programmingl">Javascript</Skill>
+                    <Skill type="database">IBM DB2</Skill>
+                    <Skill type="database">PostgreSQL</Skill>
+                    <Skill type="frontend">HTML5</Skill>
+                    <Skill type="frontend">CSS3</Skill>
+                    <Skill type="frontend">Tailwind</Skill>
+                  </div>
+                </li>
                 <li>
                   <p class="mb-2 text-primary">
                     Built a <strong class="text-white"
@@ -77,17 +105,6 @@ import StudiesAcademy from "../components/StudiesAcademy.astro";
                     <Skill type="programmingl">C#</Skill>
                   </div>
                 </li>
-              </ul>
-            </TimelineText>
-          </TimelineItem>
-
-          <TimelineItem>
-            <TimelineTime>August 2022 - Now</TimelineTime>
-            <TimelineTitle>
-              Software developer at Universidad Autonoma del Caribe
-            </TimelineTitle>
-            <TimelineText>
-              <ul class="flex flex-col gap-6">
                 <li>
                   <p class="mb-2 text-primary">
                     Participated in the <strong class="text-white"
@@ -121,43 +138,10 @@ import StudiesAcademy from "../components/StudiesAcademy.astro";
                     <Skill type="programmingl">C#</Skill>
                   </div>
                 </li>
-                <li>
-                  <p class="mb-2 text-primary">
-                    <strong class="text-white"
-                      >Team leader of Astra project</strong
-                    >. A new platform designed for students, teachers, and
-                    administrative users, built using <strong class="text-white"
-                      >React</strong
-                    >. Responsible for documentation, best practices,
-                    implementing the authentication system, logs reporting,
-                    project structure, and additional functionalities. Led the
-                    development of the notes module, enabling students to search
-                    for their notes based on their college career.
-                  </p>
-                  <div class="flex gap-2 flex-wrap">
-                    <Skill type="database">IBM DB2</Skill>
-                    <Skill type="database">PostgreSQL</Skill>
-                    <Skill type="frontend">HTML5</Skill>
-                    <Skill type="frontend">CSS3</Skill>
-                    <Skill type="programmingl">Javascript</Skill>
-                    <Skill type="programmingl">C#</Skill>
-                    <Skill type="frontend">React</Skill>
-                    <Skill type="backend">.NET Web API</Skill>
-                  </div>
-                </li>
               </ul>
             </TimelineText>
           </TimelineItem>
         </Timeline>
-      </SectionCard>
-
-      <SectionCard title="Education">
-        <StudiesItem>
-          <StudiesTitle>Software Engineer, 2019 - 2024</StudiesTitle>
-          <StudiesAcademy>
-            Universidad Autonoma del Caribe - Barranquilla, Colombia
-          </StudiesAcademy>
-        </StudiesItem>
       </SectionCard>
 
       <SectionCard title="Projects">
@@ -191,6 +175,19 @@ import StudiesAcademy from "../components/StudiesAcademy.astro";
           </BentoGridItem>
         </div>
       </SectionCard>
+
+      <SectionCard title="Conferences"> Hola </SectionCard>
+
+      <SectionCard title="Education">
+        <StudiesItem>
+          <StudiesTitle>Software Engineer, 2019 - 2024</StudiesTitle>
+          <StudiesAcademy>
+            Universidad Autónoma del Caribe - Barranquilla, Colombia
+          </StudiesAcademy>
+        </StudiesItem>
+      </SectionCard>
+
+      <SectionCard title="Certifications"> Hola </SectionCard>
 
       <SectionCard title="Skills">
         <div class="flex gap-2 mt-2 mb-6 flex-wrap">
