@@ -6,6 +6,7 @@ export default {
       backgroundColor: {
         dark: "#141414",
         card: "#272727",
+        primary: "#C1C1C1",
       },
       textColor: {
         primary: "#C1C1C1",
