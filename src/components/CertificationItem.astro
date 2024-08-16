@@ -1,0 +1,30 @@
+---
+import ExternalLink from "../icons/ExternalLink.astro";
+
+interface Props {
+  title: string;
+  issuedBy: string;
+  date: string;
+  href: string;
+}
+
+const { title, issuedBy, date, href } = Astro.props;
+---
+
+<a
+  href={href}
+  class="flex justify-between items-center w-full border border-primary/25 py-2 px-4 rounded-lg bg-black/10 hover:bg-black/20 cursor-pointer"
+  target="_blank"
+>
+  <div class="flex flex-col">
+    <h4 class="font-semibold text-lg">{title}</h4>
+    <p class="text-primary">
+      Issued by <span class="text-white font-semibold">{issuedBy}</span> | {
+        date
+      }
+    </p>
+  </div>
+  <span>
+    <ExternalLink />
+  </span>
+</a>

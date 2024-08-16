@@ -1,17 +1,15 @@
 ---
-import Tooltip from "./Tooltip.astro";
-
-interface Props {
+interface Props extends Partial<HTMLAnchorElement> {
   text: string;
-  link?: string;
+  href?: string;
   isEmail?: boolean;
 }
 
-const { link, text, isEmail } = Astro.props;
+const { href, text, isEmail } = Astro.props;
 ---
 
 <a
-  href={link}
+  href={href}
   class={`flex items-center relative justify-center md:justify-start gap-2 [&>svg]:w-5 [&>svg]:h-5 [&:hover>.tooltip]:block hover:text-white ${
     isEmail ? "cursor-text" : "cursor-pointer"
   }`}
