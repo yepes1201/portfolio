@@ -15,6 +15,7 @@ import BentoGridContent from "../components/BentoGridContent.astro";
 import StudiesItem from "../components/StudiesItem.astro";
 import StudiesTitle from "../components/StudiesTitle.astro";
 import StudiesAcademy from "../components/StudiesAcademy.astro";
+import CertificationItem from "../components/CertificationItem.astro";
 ---
 
 <Layout title="Daniel Yepes | Software Engineer">
@@ -53,17 +54,15 @@ import StudiesAcademy from "../components/StudiesAcademy.astro";
                     >. A new platform designed for students, teachers, and
                     administrative users, built using <strong class="text-white"
                       >React</strong
-                    >. Responsible for documentation, best practices,
-                    implementing the authentication system, logs reporting,
-                    project structure, and additional functionalities. Led the
-                    development of the notes module, enabling students to search
-                    for their notes based on their college career.
+                    >. Responsible for implementing architecture, documentation,
+                    authentication system, logs reporting and additional
+                    features.
                   </p>
                   <div class="flex gap-2 flex-wrap">
                     <Skill type="frontend">React</Skill>
                     <Skill type="backend">.NET Web API</Skill>
                     <Skill type="programmingl">C#</Skill>
-                    <Skill type="programmingl">Javascript</Skill>
+                    <Skill type="programmingl">TypeScript</Skill>
                     <Skill type="database">IBM DB2</Skill>
                     <Skill type="database">PostgreSQL</Skill>
                     <Skill type="frontend">HTML5</Skill>
@@ -187,13 +186,35 @@ import StudiesAcademy from "../components/StudiesAcademy.astro";
         </StudiesItem>
       </SectionCard>
 
-      <SectionCard title="Certifications"> Hola </SectionCard>
+      <SectionCard title="Certifications">
+        <div class="flex flex-col gap-2 mt-2 mb-4 w-full">
+          <CertificationItem
+            title="TypeScript Essentials"
+            issuedBy="LinkedIn Learning"
+            date="2024"
+            href="https://www.linkedin.com/learning/certificates/bbcc765d48912db607406372ebf50b8da796204242973fa062fc311fb542f334"
+          />
+          <CertificationItem
+            title="React PRO"
+            issuedBy="Udemy"
+            date="2024"
+            href="https://www.udemy.com/certificate/UC-237c332a-0801-4ae2-b216-97ca86f434d0/"
+          />
+          <CertificationItem
+            title="The Complete 2022 Web Development"
+            issuedBy="Udemy"
+            date="2022"
+            href="https://www.udemy.com/certificate/UC-887741f2-3538-4dd4-82a3-980c3fa8e6fb/"
+          />
+        </div>
+      </SectionCard>
 
       <SectionCard title="Skills">
         <div class="flex gap-2 mt-2 mb-6 flex-wrap">
           <Skill type="frontend">HTML5</Skill>
           <Skill type="frontend">CSS3</Skill>
           <Skill type="programmingl">Javascript</Skill>
+          <Skill type="programmingl">TypeScript</Skill>
           <Skill type="backend">Node.js</Skill>
           <Skill type="frontend">SCSS</Skill>
           <Skill type="frontend">React</Skill>
