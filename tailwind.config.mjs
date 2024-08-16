@@ -12,6 +12,7 @@ export default {
       },
       borderColor: {
         dark: "#141414",
+        primary: "#C1C1C1",
         card: "#272727",
       },
       backgroundImage: {
