@@ -10,8 +10,8 @@ const { href, text, isEmail } = Astro.props;
 
 <a
   href={href}
-  class={`flex items-center relative justify-center md:justify-start gap-2 [&>svg]:w-5 [&>svg]:h-5 [&:hover>.tooltip]:block hover:text-white ${
-    isEmail ? "cursor-text" : "cursor-pointer"
+  class={`flex items-center relative justify-center text-white md:justify-start gap-2 [&>svg]:w-5 [&>svg]:h-5 [&:hover>.tooltip]:block ${
+    isEmail ? "cursor-text" : "cursor-pointer hover:underline"
   }`}
 >
   <slot />
