@@ -46,7 +46,7 @@ const { type } = Astro.props;
 
 <span
   data-tooltip={typesConfig[type].title}
-  class={`relative px-2 py-1 border rounded-full text-sm font-semibold [&:hover>div]:block ${typesConfig[type].class}`}
+  class={`relative px-2 py-1 border rounded-lg text-sm font-semibold [&:hover>div]:block bg-white/15 border-white/30`}
 >
   <slot />
   <Tooltip text={typesConfig[type].title} />
