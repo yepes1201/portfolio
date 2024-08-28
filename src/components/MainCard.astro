@@ -9,13 +9,8 @@ import XIcon from "../icons/XIcon.astro";
 import EnvelopeIcon from "../icons/EnvelopeIcon.astro";
 ---
 
-<article class="flex flex-col self-start gap-4 py-6">
-  <header class="flex items-center gap-4">
-    <img
-      class="w-[132px] h-[132px] hidden md:block rounded-full object-cover"
-      src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt="daniel yepes photo"
-    />
+<header id="header" class="flex flex-col self-start gap-4 py-6">
+  <div class="flex items-center justify-between gap-4">
     <div class="flex flex-col gap-4">
       <div>
         <h1 class="text-2xl font-bold">Daniel Yepes</h1>
@@ -58,5 +53,10 @@ import EnvelopeIcon from "../icons/EnvelopeIcon.astro";
         </ul>
       </div>
     </div>
-  </header>
-</article>
+    <img
+      class="w-[132px] h-[132px] hidden md:block rounded-full object-cover"
+      src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt="daniel yepes photo"
+    />
+  </div>
+</header>
