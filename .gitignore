@@ -3,6 +3,8 @@ dist/
 
 # generated types
 .astro/
+.npm/
+.pnpm/
 
 # dependencies
 node_modules/
