@@ -7,5 +7,5 @@
 .vscode
 .git
 .gitignore
-README.md
+*.md
 LICENSE
