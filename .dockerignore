@@ -8,4 +8,8 @@
 .git
 .gitignore
 *.md
+*.yml
+*.txt
 LICENSE
+Dockerfile
+Dockerfile.dev
